@@ -1,7 +1,7 @@
 package Lesson1;
 
 public class Cat implements  Total   {
-    int limitRun =0;
-    int limitJump =0;
+    int limitRun =10;
+    int limitJump =3;
 
 }

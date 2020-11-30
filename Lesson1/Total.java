@@ -6,12 +6,12 @@ public interface Total {
 
     default void run(int dist) {
         if (this.limitRun > dist) System.out.println("пробежал");
-        if (this.limitRun > dist) System.out.println("не пробежал");
+        if (this.limitRun < dist) System.out.println("не пробежал");
     }
 
     default void jump(int heigh){
         if (this.limitJump > heigh) System.out.println("перепрыгнул");
-        if (this.limitJump > heigh) System.out.println("не перепрыгнул");
+        if (this.limitJump < heigh) System.out.println("не перепрыгнул");
 
     }
 

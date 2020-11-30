@@ -1,7 +1,7 @@
 package Lesson1;
 
 public class Robot implements Total {
-    int limitRun =0;
-    int limitJump =0;
+    int limitRun =200;
+    int limitJump =10;
 
 }
