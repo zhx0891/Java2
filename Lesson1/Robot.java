@@ -1,5 +1,7 @@
 package Lesson1;
 
-public class Robot extends Testable {
+public class Robot implements Total {
+    int limitRun =0;
+    int limitJump =0;
 
 }
