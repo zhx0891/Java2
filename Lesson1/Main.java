@@ -6,8 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
         for (int i = 0; i < testees.length; i++) {
-                testees[i].jump(test[0].getHeigh(), testees[1]);
-                testees[i].run(test[0].getDistance(), testees[1]);
+                testees[i].jump(test[0].getHeigh(), testees[i]);
+                testees[i].run(test[1].getDistance(), testees[i]);
           }
 
         }
