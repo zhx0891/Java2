@@ -1,5 +1,5 @@
 package Lesson1;
 
 public class Wall implements Tests {
-static int height=10;
+   public static int heigh = 5;
 }

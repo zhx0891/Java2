@@ -1,18 +1,22 @@
 package Lesson1;
 
 public interface Total {
-    int limitRun =0;
-    int limitJump =0;
 
-    default void run(int dist) {
-        if (this.limitRun > dist) System.out.println("пробежал");
-        if (this.limitRun < dist) System.out.println("не пробежал");
+
+    default void run(int dist, Total testee) {
+        int limitRun=testee.getRunLimit();
+        if (limitRun > dist) System.out.println(testee.getType()+" пробежал");
+        if (limitRun < dist) System.out.println(testee.getType()+" не пробежал");
     }
 
-    default void jump(int heigh){
-        if (this.limitJump > heigh) System.out.println("перепрыгнул");
-        if (this.limitJump < heigh) System.out.println("не перепрыгнул");
+    default void jump(int heigh, Total testee){
+        int limitJump=testee.getJumpLimit();
+        if (limitJump > heigh) System.out.println(testee.getType()+" перепрыгнул");
+        if (limitJump < heigh) System.out.println(testee.getType()+" не перепрыгнул");
 
     }
+    abstract int getJumpLimit();
+    abstract int getRunLimit();
+    abstract String getType();
 
 }

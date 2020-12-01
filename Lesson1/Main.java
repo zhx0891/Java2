@@ -7,16 +7,15 @@ public class Main {
     public static void main(String[] args) {
         for (int i = 0; i < testees.length; i++) {
             for (int j = 0; j < test.length; j++) {
-                justDoIt(testees[i], test[j]);
+
+                testees[i].jump(test[j].getHeigh(), testees[i]);
+                testees[i].run(test[j].getDistance(), testees[i]);
             }
 
         }
 
     }
-   static void justDoIt (Total a, Tests  b) {
-        a.run(b.distance);
-        a.jump(b.heigh);
-    }
+
 
 
 
