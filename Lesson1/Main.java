@@ -6,11 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
         for (int i = 0; i < testees.length; i++) {
-            for (int j = 0; j < test.length; j++) {
-
-                testees[i].jump(test[j].getHeigh(), testees[i]);
-                testees[i].run(test[j].getDistance(), testees[i]);
-            }
+                testees[i].jump(test[0].getHeigh(), testees[1]);
+                testees[i].run(test[0].getDistance(), testees[1]);
+          }
 
         }
 
@@ -19,5 +17,5 @@ public class Main {
 
 
 
-    }
+
 
