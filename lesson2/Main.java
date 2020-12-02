@@ -1,17 +1,28 @@
 package lesson2;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Main {
-    public static void main(String[] args) {
-        int a;
-        int b;
+    static String [][] arr = new String[4][5] ;
+
+    public static void main(String[] args) throws ArrayIndexOutOfBoundsException {
         try {
-         div(5, 0);
+            testArr(arr);
         }catch(Exception e){
-            System.out.println("Исключение:" + e);
+            e.printStackTrace();
+
         }
+
     }
-    static int div(int a, int b){
-       return a/b;
+
+    static void testArr(String[][]  e) {
+
+        if (e.length>4){
+            ArrayIndexOutOfBoundsException myExc=new ArrayIndexOutOfBoundsException("массив слишком большой");
+            throw myExc;
+
+        }
     }
 }
 
