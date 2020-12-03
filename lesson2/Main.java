@@ -1,8 +1,5 @@
 package lesson2;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class Main {
     static String[][] arr1 = new String[4][4];
 
@@ -14,25 +11,26 @@ public class Main {
             x++;
             for (int j = 0; j < arr[0].length; j++) {
                 arr[i][j] = ""+(int)(Math.random()*10);
-//                arr[2][2] = "O";
+                int c=(int)(Math.random()*4);
+                arr[c][c] = "O";
                 System.out.print(arr[i][j]+" ");
             }
         }
         System.out.println();
     }
-
-    public static void main(String[] args)  {
-        createArr(arr1);
-        testArr(arr1);
-    }
-
-    static void testArr(String[][] e) {
+    static void testArr(String[][] e)  {
 
         if (e.length == 4 & e[0].length == 4) {
+
             int sum = 0;
             for (int i = 0; i < e.length; i++) {
                 for (int j = 0; j < e[0].length; j++) {
-                    int x = Integer.parseInt (e[i][j]);
+                    int x=0;
+                    try {
+                         x = Integer.parseInt(e[i][j]);
+                    }catch (Exception h){
+                        System.out.println("не верный тип элемента массива");
+                    }
                     sum +=x;
                 }
             }
@@ -43,6 +41,13 @@ public class Main {
 
         }
     }
+
+    public static void main(String[] args)  {
+        createArr(arr1);
+        testArr(arr1);
+    }
+
+
 }
 
 
