@@ -14,14 +14,14 @@ public class Main {
             x++;
             for (int j = 0; j < arr[0].length; j++) {
                 arr[i][j] = ""+(int)(Math.random()*10);
-//                arr[2][2] = "e";
+//                arr[2][2] = "O";
                 System.out.print(arr[i][j]+" ");
             }
         }
         System.out.println();
     }
 
-    public static void main(String[] args) throws ArrayIndexOutOfBoundsException {
+    public static void main(String[] args)  {
         createArr(arr1);
         testArr(arr1);
     }
@@ -38,8 +38,8 @@ public class Main {
             }
             System.out.println("Сумма массива = "+sum);
         } else {
-            ArrayIndexOutOfBoundsException myExc = new ArrayIndexOutOfBoundsException("несоразмерный массив");
-            throw myExc;
+            System.out.println("несоразмерный массив");
+
 
         }
     }
