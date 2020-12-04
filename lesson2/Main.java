@@ -18,38 +18,42 @@ public class Main {
         }
         System.out.println();
     }
-    static void testArr(String[][] e)  throws MyArrayDataException{
 
-        if (e.length != 4 || e[0].length != 4) {
-            throw new MyArraySizeException();
-        }
-
-            int sum =0;
-            int x=0;
-            for (int i = 0; i < e.length; i++) {
-                for (int j = 0; j < e[0].length; j++) {
-                    x = Integer.parseInt(e[i][j]);
-                    sum +=x;
-                }
-
-                }System.out.println("Сумма массива = "+sum);
-
-            }
 
     public static void main(String[] args) {
         createArr(arr1);
         try {
             testArr(arr1);
-        } catch (NumberFormatException exc) {
-            System.err.println("некорректное  значение ячейки массива");
+        } catch (MyArrayDataException ex1) {
+            System.err.println(ex1.getMessage());
+            ex1.getStackTrace();
+        }catch (MyArraySizeException ex2){
+            System.err.println(ex2.getMessage());
 
-        }catch (ArrayIndexOutOfBoundsException exc){
-            System.err.println("несоразмерный массив");
 
-        }finally {
+        }finally{
             System.out.println("FINAL");
         }
 
+
+    }
+    static void testArr(String[][] e)  throws MyArrayDataException {
+
+        if (e.length != 4 || e[0].length != 4) {
+            throw new MyArraySizeException();
+        }
+
+        int sum =0;
+        int x=0;
+        for (int i = 0; i < e.length; i++) {
+            for (int j = 0; j < e[0].length; j++) {
+                x = Integer.parseInt(e[i][j]);
+                sum +=x;
+
+
+            }
+
+        }System.out.println("Сумма массива = "+sum);
 
     }
 
