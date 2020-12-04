@@ -11,8 +11,8 @@ public class Main {
             x++;
             for (int j = 0; j < arr[0].length; j++) {
                 arr[i][j] = ""+(int)(Math.random()*10);
-//                int c=(int)(Math.random()*4);
-//                arr[c][c] = "O";
+                int c=(int)(Math.random()*4);
+                arr[c][c] = "O";
                 System.out.print(arr[i][j]+" ");
             }
         }
@@ -40,10 +40,11 @@ public class Main {
         createArr(arr1);
         try {
             testArr(arr1);
-        } catch (MyArrayDataException exc) {
-            System.err.println(exc);
+        } catch (NumberFormatException exc) {
+            System.err.println("некорректное  значение ячейки массива");
 
-        }catch (MyArraySizeException exc){
+        }catch (ArrayIndexOutOfBoundsException exc){
+            System.err.println("несоразмерный массив");
 
         }finally {
             System.out.println("FINAL");
