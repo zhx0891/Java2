@@ -6,10 +6,19 @@ import java.util.ArrayList;
 public class PhoneGuide {
 static ArrayList<PhoneUser> users = new ArrayList<>();
     public static void main(String[] args) {
+        users.add(new PhoneUser("Иванов", "12374") );
+        users.add(new PhoneUser("Петров", "54321") );
+        users.add(new PhoneUser("Сидоров", "16789") );
+        users.add(new PhoneUser("Рябко", "123456") );
+        users.add(new PhoneUser("Акопян", "1234") );
+        users.add(new PhoneUser("Селиванов", "54321") );
+        users.add(new PhoneUser("Сидоров", "16789") );
+        users.add(new PhoneUser("Андриенко", "123456") );
         users.add(new PhoneUser("Иванов", "1234") );
         users.add(new PhoneUser("Петров", "54321") );
         users.add(new PhoneUser("Сидоров", "16789") );
         users.add(new PhoneUser("Иванов", "123456") );
+
 
     searchUser("Иванов");
 
