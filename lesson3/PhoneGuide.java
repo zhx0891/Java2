@@ -2,11 +2,17 @@ package lesson3;
 
 import java.util.ArrayList;
 
-public class PhoneGuide {
 
+public class PhoneGuide {
+static ArrayList<PhoneUser> users = new ArrayList<>();
     public static void main(String[] args) {
-        ArrayList<PhoneUser> users = new ArrayList<>();
         users.add(new PhoneUser("Иванов", "1234") );
+        users.add(new PhoneUser("Петров", "54321") );
+        users.add(new PhoneUser("Сидоров", "16789") );
+        users.add(new PhoneUser("Иванов", "123456") );
+
+    searchUser("Иванов");
+
     }
 
 
@@ -19,8 +25,19 @@ public class PhoneGuide {
             this.name =name;
             this.number = number;
         }
+        void userInfo(){
+            System.out.println(this.name+" "+this.number);
+        }
 
 
     }
+   public static void searchUser(String nameUser){
+       for (int i = 0; i < users.size(); i++) {
+           if (users.get(i).name.equals(nameUser)){
+               users.get(i).userInfo();
+           }
+       }
+
+   }
 
 }
