@@ -1,10 +1,13 @@
 package lesson3;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Set;
 
 
 public class PhoneGuide {
 static ArrayList<PhoneUser> users = new ArrayList<>();
+static HashMap<String, Set<String>>hm = new HashMap<>();
     public static void main(String[] args) {
         users.add(new PhoneUser("Иванов", "12374") );
         users.add(new PhoneUser("Петров", "54321") );
@@ -20,7 +23,8 @@ static ArrayList<PhoneUser> users = new ArrayList<>();
         users.add(new PhoneUser("Иванов", "123456") );
 
 
-    searchUser("Иванов");
+    searchUsers("Иванов");
+    searchNumbers("Иванов");
 
     }
 
@@ -40,13 +44,21 @@ static ArrayList<PhoneUser> users = new ArrayList<>();
 
 
     }
-   public static void searchUser(String nameUser){
+   public static void searchUsers(String nameUser){
        for (int i = 0; i < users.size(); i++) {
            if (users.get(i).name.equals(nameUser)){
                users.get(i).userInfo();
            }
        }
 
+   }
+
+   public static void searchNumbers (String nameUser){
+       for (int i = 0; i < users.size(); i++) {
+           if()
+           hm.put(users.get(i).name, users.get(i).number);
+       }
+       System.out.println(hm.get(nameUser));
    }
 
 }
